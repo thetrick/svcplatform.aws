@@ -11,6 +11,7 @@ SET FUNCTION_FILE="svcplatform-sqs-consumer.zip"
 SET EXEC_ROLE="arn:aws:iam::503080364706:role/Service-Platform-SQS-Consumer-Lambda-Role"
 SET DESCR="Lambda function pops messages off the AWS SQS SOW Builder Queue."
 SET TASK_QUEUE_URL="https://sqs.us-east-1.amazonaws.com/503080364706/msgq-svcplatform-sowdocset-builder"
+SET WORKER_LAMBDA_NAME="svcplatform-sqs-worker"
 
 rem Remove svcplatform-sqs-consumer.zip and recreate with 7zip Command Line Utiilty
 del %FUNCTION_FILE%
@@ -27,7 +28,7 @@ aws lambda create-function ^
    --function-name %FUNCTION_NAME% ^
    --zip-file fileb://%FUNCTION_FILE% ^
    --role %EXEC_ROLE% ^
-   --environment Variables={REGION=%REGION%,TASK_QUEUE_URL=%TASK_QUEUE_URL%} ^
+   --environment Variables={REGION=%REGION%,TASK_QUEUE_URL=%TASK_QUEUE_URL%,WORKER_LAMBDA_NAME=%WORKER_LAMBDA_NAME%} ^
    --handler %ENTRY_POINT% ^
    --runtime nodejs6.10 ^
    --description %DESCR% ^
