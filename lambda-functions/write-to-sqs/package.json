@@ -1,0 +1,24 @@
+{
+  "name": "write2sqs",
+  "version": "1.0.0",
+  "description": "Lambda function create a message on an AWS SQS Queue.",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.62.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "7z a write2sqs.zip * -r -x!*.zip -x!*.json -x!*.log -x!*.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetrick/write2sqs.git"
+  },
+  "author": "Todd G. Hetrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thetrick/write2sqs/issues"
+  },
+  "homepage": "https://github.com/thetrick/write2sqs#readme"
+}
