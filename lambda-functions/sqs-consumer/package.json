@@ -1,0 +1,27 @@
+{
+    "name": "sqs-consumer",
+    "version": "1.0.0",
+    "description": "Lambda function pops messages off the AWS SQS SOW Builder Queue.",
+    "main": "index.js",
+    "dependencies": {
+        "aws-sdk": "^2.62.0",
+        "async": "2.0.1"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/jshint .",
+        "predeploy": "7z a svcplatform-sqs-consumer.zip * -r -x!*.zip -x!*.log -x!*.git -x!.jshint*"
+    },
+    "devDependencies": {
+        "jshint": "2.9.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thetrick/svcplatform.aws.git"
+    },
+    "author": "Todd G. Hetrick",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thetrick/svcplatform.aws/issues"
+    },
+    "homepage": "https://github.com/thetrick/svcplatform.aws#readme"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "sqs-worker",
+    "version": "1.0.0",
+    "description": "Lambda function processes messages to create SOW Document Sets in SharePoint.",
+    "main": "index.js",
+    "dependencies": {
+        "aws-sdk": "^2.62.0"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/jshint .",
+        "predeploy": "7z a svcplatform-sqs-worker.zip * -r -x!*.zip -x!*.log -x!*.git -x!.jshint*"
+    },
+    "devDependencies": {
+        "jshint": "2.9.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thetrick/svcplatform.aws.git"
+    },
+    "author": "Todd G. Hetrick",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thetrick/svcplatform.aws/issues"
+    },
+    "homepage": "https://github.com/thetrick/svcplatform.aws#readme"
+}
