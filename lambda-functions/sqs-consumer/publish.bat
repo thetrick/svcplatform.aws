@@ -17,8 +17,8 @@ rem Remove svcplatform-sqs-consumer.zip and recreate with 7zip Command Line Utii
 del %FUNCTION_FILE%
 7z a %FUNCTION_FILE% * -r -x!*.zip -x!*.log -x!*.git -x!*.bat -x!.jshint*
 
-goto create
-rem goto update
+rem goto create
+goto update
 
 :create
 rem Create the Lambda function
